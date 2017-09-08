@@ -15,4 +15,4 @@ A lot, and not much. I guess the answer is I'm not really sure. The blog is like
 
 Speaking of conversation, you may also notice there is currently no commenting system in place. This is to try and reduce the amount of time required to maintain the blog hopefully encouraging me to post more. I also think the last thing people need in 2017 is another place to have a conversation so for now twitter will be the meeting place of choice.
 
-So feel free to hit me up anytime [@njdancer](https://twitter.com/nj_dancer) and check back here soon.
+So feel free to hit me up anytime [@nj_dancer](https://twitter.com/nj_dancer) and check back here soon.
