@@ -23,6 +23,8 @@ url: "http://nick.dncr.me" # the base hostname & protocol for your site, e.g. ht
 twitter_username: nj_dancer
 github_username:  njdancer
 
+google_analytics: UA-106143299-1
+
 # Build settings
 markdown: kramdown
 theme: minima
