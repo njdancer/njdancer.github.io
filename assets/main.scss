@@ -4,6 +4,29 @@
 
 @import "minima";
 
+$site-title-height: $base-line-height * $base-font-size * 2.25;
+
+$title-image-size: 45px;
+$title-image-width: $title-image-size;
+$title-image-height: $title-image-size;
+$title-image-padding: 5px;
+
+.site-title {
+  margin-left: $title-image-width + $title-image-padding;
+  line-height: $site-title-height;
+}
+
+.site-title::before {
+  content: '';
+  position: absolute;
+  margin-top: ($site-title-height - $title-image-height) / 2;
+  margin-left: -$title-image-width - $title-image-padding;
+  background-image: url("{{ "/assets/portrait_circle_title.jpg" | relative_url }}");
+  background-size: $title-image-width $title-image-height;
+  height: $title-image-height;
+  width: $title-image-width;
+}
+
 figcaption {
   @include relative-font-size(0.75);
   margin-left: 4%;
