@@ -1,0 +1,11 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+figcaption {
+  @include relative-font-size(0.75);
+  margin-left: 4%;
+  color: lighten($text-color, 50%);
+}
