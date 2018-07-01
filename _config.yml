@@ -22,6 +22,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nick.dncr.me" # the base hostname & protocol for your site, e.g. http://example.com
 s3_url: "https://nickdancer.s3.amazonaws.com"
 
+sass:
+  sass_dir: assets/stylesheets
+
 twitter_username: nj_dancer
 github_username:  njdancer
 instagram_username: njdancer
