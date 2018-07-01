@@ -20,6 +20,8 @@ description: > # this means to ignore newlines until "baseurl:"
   share myself with the world
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nick.dncr.me" # the base hostname & protocol for your site, e.g. http://example.com
+s3_url: "https://nickdancer.s3.amazonaws.com"
+
 twitter_username: nj_dancer
 github_username:  njdancer
 instagram_username: njdancer
