@@ -1,0 +1,2 @@
+#!/bin/sh
+diskutil unmount /Users/nickdancer/Library/Mobile\ Documents/com~apple~CloudDocs/nick.dncr.me/assets/posts

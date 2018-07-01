@@ -1,5 +1,7 @@
 _site
 .sass-cache
 .jekyll-metadata
-bin
+bin/*
+!bin/mount-s3
+!bin/umount-s3
 assets/posts
