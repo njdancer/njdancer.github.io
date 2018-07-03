@@ -1,10 +1,15 @@
-Ive been going through my home recently looking for options to make my existing appliances a bit smarter. Our remote controlled air conditioner stood out because its something that can take several minutes to effectively cool/heat a room. It can also be quite costly to run so ensuring this only runs when necessary could also save money off our electricity bill. In order for this to work though, I would need to find a way to interface with the AC. Short of cracking open the AC unit(which I can’t do in a rental) my only real option was to reverse engineer the infrared remote control that it comes with.
+---
+title: Reverse Engineering Infrared for AC Remotes
+layout: post
+---
+
+I was going through my home recently looking for options to make my existing appliances a bit smarter. Our remote controlled air conditioner stood out because its something that can take several minutes to effectively cool/heat a room. It can also be quite costly to run so ensuring this only runs when necessary could also save money off my electricity bill. In order for this to work, I would need to find a way to interface with the AC. Short of cracking open the AC unit(which I can’t do in a rental) my only real option was to reverse engineer the infrared remote control that it comes with.
 
 ## Some Background on Infrared
 
 Before we dive into this process, It’s worthwhile covering some background information on infrared or IR as we’ll refer to it. IR is a specific wavelength(or range of wavelengths) of electromagnetic radiation that is just beneath visible light on the electromagnetic spectrum. This means that despite it not being visible to the human eye it behaves exactly as we would expect visible light to. This also means that transmitting and receiving IR is simply a matter of having an LED and some kind of photosensor tuned for IR wavelengths.
 
-Now, where things start to get a little more complex is when sending data over IR. A single IR led is fine for transmitting IR but effectively serves as a single bit(0 or 1 - off or on). You may think the solution is just to add more LED’s with a paired photosensor but light isn't that simple. In order for the remote to have the greatest range it will be designed to send IR in as many directions as possible meaning the light from each LED is unlikely to be detected by only its corresponding sensor. Other devices with complex photosensors(eg digital cameras) generally solve this through optical lenses however for a remote this will only serve to limit the range and is unlikely to allow for multiple LED’s as you would still require precise alignment with the sensor. This is essentially the purpose of optical fiber in fibre-optic communications.
+Now, where things start to get a little more complex is when sending data over IR. A single IR LED is fine for transmitting IR but effectively serves as a single bit(0 or 1 - off or on). You may think the solution is just to add more LED’s, each with a matching photosensor, but light isn't that simple. In order for the remote to have the greatest range it will be designed to send IR in as many directions as possible meaning the light from each LED is unlikely to be detected by only its corresponding sensor. Other devices with complex photosensors(eg digital cameras) generally solve this through optical lenses however for a remote this would only serve to limit the range and is unlikely to allow for multiple LED’s as you would then require precise alignment with the sensor. This is essentially the purpose of optical fiber in fibre-optic communications.
 
 So, if we can't send multiple bits in parallel we need some way to send them in serial. The solution to this is [modulation](https://en.wikipedia.org/wiki/Modulation). If you think you've heard the term modulation before you're probably right. Amplitude modulation and frequency modulation are two very common methods used for radio. More commonly referred to as AM and FM. This is also the origin of the term [modem][2]. But what is modulation?
 
@@ -25,17 +30,15 @@ So, to put this all together, when your remote sends a signal it turns its IR LE
 
 Now that we’ve made it this far we can finally build something to put this knowledge to good use and one of the easiest platforms to get started with is Arduino. For those who aren't familiar with Arduino, a thorough explanation is outside the scope of this article and there are plenty of great resources out there already. Suffice it to say though, Arduino is an open source platform for building embedded devices. This includes designs for prototype boards, a development environment(IDE) and thanks to the community a large number of libraries to support nearly anything you could imagine. For this article I've actually ended up using a nodeMCU development board but thanks again to the community this is completely compatible with the Arduino IDE and for this article, the distinction should be fairly meaningless.
 
-{% include image.html name="nodemcu-arduino-comparison.jpg" caption="NodeMCU(Left) and Arduino Uno(Right)" %}
+{% include image.html name="nodemcu-arduino-comparison.png" caption="NodeMCU(Left) and Arduino Uno(Right)" %}
 
 After we have the microcontroller this is all going to run on we next need the IR receiver. You may be asking yourself whether this is any different to the photosensor we were mentioning earlier. A photosensor is simply designed to absorb light and convert it to electrical energy that can be measured. This would still require something to isolate the 38kHz wave so that you can measure the pulse positions. This is a where a receiver simplifies things a little bit. A receiver will usually have additional hardware embedded which will isolate the wave for us and emit a signal whenever the wave is detected. This makes wiring a simple matter of connecting ground to ground, Vcc to 3.3v, and the signal pin to an available pin on the Arduino. In this image we've used D5 which corresponds to pin 14 for our board.
 
-{% include image.html name="nodemcu-ir-receiver-bread.jpg" caption="Breadboard diagram for ESP8266 and IR receiver" %}
+{% include image.html name="nodemcu-ir-receiver-bread.png" caption="Breadboard diagram for ESP8266 and IR receiver" %}
 
 The final piece of the puzzle is some software to process this input. We’ll split this into two pieces. The first piece will be some code that runs on the Arduino to process the IR input and report the pulse timings over serial. The second piece will capture the pulse timings and present them in a format that is easier to interpret. Thanks to the open source community this is made quite a bit easier.
 
-For the Arduino, there is a library called [IRRemote](https://github.com/z3t0/Arduino-IRremote) that will simplify our first task. This library is incompatible with the ESP8266 but fortunately this has been solved by a fork named [IRRemoteESP8266](https://github.com/markszabo/IRremoteESP8266). After following their installation instructions we can load the example sketch IRRecvDumpV2.
-
-{% include image.html name="arduino-sketch-example.png" caption="Arduino example sketch - IRRecvDumpV2" %}
+For the Arduino, there is a library called [IRRemote](https://github.com/z3t0/Arduino-IRremote) that will simplify our first task. This library is incompatible with the ESP8266 but fortunately this has been solved by a fork named [IRRemoteESP8266](https://github.com/markszabo/IRremoteESP8266). After following their installation instructions we can, inside the Arduino IDE, go to File > Examples > IRremote > IRrecvDumpV2 to load the sketch we need for our firmware.
 
 At this point with our Arduino connected we can hit the upload button in the Arduino IDE and the sketch will be compiled and uploaded. We can then open the serial monitor and try and capture a signal. If everything is working any IR commands in range of the receiver should be recorded, decoded and printed to the serial monitor.
 
@@ -48,8 +51,11 @@ I mentioned previously that we would need two pieces of software. We have upload
 SERIAL_PORT=/dev/cu.wchusbserial1410; stty -f "$SERIAL_PORT" 115200|grep -a --line-buffered rawData "$SERIAL_PORT"|tr -u '\n' '\0'|xargs -0 -n1 python auto_analyse_raw_data.py
 ```
 
-This will capture the serial output and pass the relevant pieces of data to our script for further analysis.
+If we run this command inside a terminal we should find we can send IR commands to the Arduino and have the data analysed. The analysis will be printed to the terminal window allowing us to understand what is being sent.
 
+{% include image.html name="IR-data-analysis.mp4" caption="terminal output" %}
+
+We can now finally
 
 
 [1]:https://en.wikipedia.org/wiki/Modulation
