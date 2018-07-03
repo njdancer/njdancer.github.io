@@ -1,8 +1,9 @@
 ignore /^_site/ # NOTE: this can interfere with Guard::LiveReload
 
 jekyll_plus_options = {
-  :serve  => true,
-  :drafts => true
+  :config => ['_config.yml', '_config.dev.yml'],
+  :drafts => true,
+  :serve  => true
 }
 
 s3_options = {
