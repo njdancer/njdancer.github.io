@@ -1,2 +1,0 @@
-#!/bin/sh
-s3fs nickdancer:/assets/posts /Users/nickdancer/Library/Mobile\ Documents/com~apple~CloudDocs/nick.dncr.me/assets/posts -o passwd_file=/Users/nickdancer/.passwd-s3fs -o umask=0007,uid=501 -o use_cache=/tmp

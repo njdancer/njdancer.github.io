@@ -12,3 +12,10 @@ gem "github-pages", 186, group: :jekyll_plugins
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
 end
+
+group :development do
+  gem 'rb-readline'
+  gem 'guard'
+  gem 'guard-s3', :git => "https://github.com/njdancer/guard-s3.git", :ref => "b4537ca"
+  gem 'guard-jekyll-plus'
+end
