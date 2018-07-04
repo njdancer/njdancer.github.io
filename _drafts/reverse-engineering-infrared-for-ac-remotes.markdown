@@ -55,7 +55,21 @@ If we run this command inside a terminal we should find we can send IR commands 
 
 {% include image.html name="IR-data-analysis.mp4" caption="terminal output" %}
 
-We can now finally
+We can now finally map these bits of data to commands on our remote. This stage will vary greatly depending on your remote and is largely a matter of trial and error. There are however a few tips I can share that may make this easier.
+
+The easiest bits to find first are any that represent functinality that can be either on or off. Power is a great example of this and the following image shows our payload oscilating between these two states.
+
+###image - power analyisis oscillating
+
+Slightly more difficult is any feature that has multiple states. We can see in the below image as we change the temperature which has a range of 16 - 30, multiple bits are changing over time. Those who have experience with binary arithmetic may notice that this is actually a 4 bit integer. You may also notice that this integer(and ultimately the entire stream) has had its LSB(least significant bit) sent first. This is something we will need to know when reconstructing the signal.
+
+Through trial and error we can change settings on the remote and slowly map different functionality to different bits in our stream. However one common feature may confuse you. You may have noticed some bits that change with multiple commands. It is very common for these streams to have some kind of checksum. These are bits that don't contain any new data but rather data that validates other bits and that none of these bits have been interfered with during transmission.
+
+With the timing data and bit mapping available we now have enough information to be able to reconstruct these signal's and we have successfully accomplished our goal.
+
+With all this said we should now have enough information to
+
+
 
 
 [1]:https://en.wikipedia.org/wiki/Modulation
