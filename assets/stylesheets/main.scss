@@ -34,3 +34,7 @@ figcaption {
   margin-left: 4%;
   color: lighten($text-color, 50%);
 }
+
+.fullwidth img {
+  min-width: 100%;
+}
