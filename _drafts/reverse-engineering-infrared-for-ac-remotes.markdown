@@ -1,6 +1,12 @@
 ---
 title: Reverse Engineering Infrared for AC Remotes
 layout: post
+tags:
+  - Infrared
+  - Reverse Engineering
+  - Arduino
+  - ESP8266
+  - Smart Home
 ---
 
 I was going through my home recently looking for options to make my existing appliances a bit smarter. Our remote controlled air conditioner stood out because its something that can take several minutes to effectively cool/heat a room. It can also be quite costly to run so ensuring this only runs when necessary could also save money off my electricity bill. In order for this to work, I would need to find a way to interface with the AC. I know it uses Infrared like most remote controls but further details of the protocol were unavailable. The only option left was to reverse engineer the remote that came with the unit.
