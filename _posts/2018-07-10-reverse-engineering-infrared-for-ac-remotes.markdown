@@ -152,5 +152,5 @@ With this, the earlier timing information we gathered and bit order, we now have
 [2]:https://en.wikipedia.org/wiki/Modem
 [3]:https://github.com/z3t0/Arduino-IRremote
 [4]:https://github.com/markszabo/IRremoteESP8266
-[5]:(https://github.com/markszabo/IRremoteESP8266/blob/master/tools/auto_analyse_raw_data.py)
+[5]:https://github.com/markszabo/IRremoteESP8266/blob/master/tools/auto_analyse_raw_data.py
 [6]:http://www.pcbheaven.com/wikipages/Pulse_Position_Modulation/
