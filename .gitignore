@@ -1,11 +1,3 @@
-_site
-.sass-cache
-.jekyll-metadata
-bin/*
-!bin/mount-s3
-!bin/umount-s3
-assets/posts
-
 # Logs
 logs
 *.log

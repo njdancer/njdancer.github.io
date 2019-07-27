@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" baseProfile="full" width="680px" height="250px" viewBox="0 0 680 250" preserveAspectRatio="xMidYMid meet" id="svg_document" style="zoom: 1;">
+    <title id="svg_document_title">Untitled.svg</title>
+    <g>
+      <polyline points="
+          0,50
+        10,50
+          
+          10,0
+        20,0
+          
+          20,50
+        30,50
+          
+          30,0
+        40,0
+          
+          40,50
+        50,50
+          
+          50,0
+        60,0
+          
+          60,50
+        70,50
+          
+          70,0
+        80,0
+          
+          80,50
+        90,50
+          
+          90,0
+        100,0
+          
+          100,50
+        110,50
+          
+          110,0
+        120,0
+          
+          120,50
+        130,50
+          
+          130,0
+        140,0
+          
+          140,50
+        150,50
+          
+          150,50
+        160,50
+          
+          160,50
+        170,50
+          
+          170,50
+        180,50
+          
+          180,50
+        190,50
+          
+          190,50
+        200,50
+          
+          200,0
+        210,0
+          
+          210,50
+        220,50
+          
+          220,0
+        230,0
+          
+          230,50
+        240,50
+          
+          240,0
+        250,0
+          
+          250,50
+        260,50
+          
+          260,0
+        270,0
+          
+          270,50
+        280,50
+          
+          280,0
+        290,0
+          
+          290,50
+        300,50
+          
+          300,0
+        310,0
+          
+          310,50
+        320,50
+          
+          320,0
+        330,0
+          
+          330,50
+        340,50
+          
+          340,50
+        350,50
+          
+          350,50
+        360,50
+          
+          360,50
+        370,50
+          
+          370,50
+        380,50
+          
+          380,50
+        390,50
+          
+          390,50
+        400,50
+          
+          400,50
+        410,50
+          
+          410,50
+        420,50
+          
+          420,50
+        430,50
+          
+          430,50
+        440,50
+          
+          440,50
+        450,50
+          
+          450,50
+        460,50
+          
+          460,50
+        470,50
+          
+          470,0
+        480,0
+          
+          480,50
+        490,50
+          
+          490,0
+        500,0
+          
+          500,50
+        510,50
+          
+          510,0
+        520,0
+          
+          520,50
+        530,50
+          
+          530,0
+        540,0
+          
+          540,50
+        550,50
+          
+          550,0
+        560,0
+          
+          560,50
+        570,50
+          
+          570,0
+        580,0
+          
+          580,50
+        590,50
+          
+          590,0
+        600,0
+          
+          600,50
+        610,50
+          
+          610,50
+        "
+        stroke="#000000" id="polyline1" stroke-width="2.5px" fill="none" transform="translate(40 100)" visibility="visible"></polyline>
+      <text text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px" text-anchor="end" x="30" y="104">On</text>
+      <text text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px" text-anchor="end" x="30" y="154">Off</text>
+    </g>
+
+
+
+    <g transform="translate(50 70)" stroke-width="1" stroke="#000000"><line y1="0" x1="0" y2="0" x2="188"></line>
+        <line y1="5" x1="0" y2="-5" x2="0" transform=""></line>
+        <line y1="5" x1="188" y2="-5" x2="188"></line>
+        <text stroke="none" style="outline-style:none;" x="94" y="-5" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px" text-anchor="middle">Data[0] = 0</text>
+        <text stroke="none" style="outline-style:none;" x="94" y="13" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px" text-anchor="middle"></text>
+    </g>
+    <g transform="translate(242 70)" stroke-width="1" stroke="#000000"><line y1="0" x1="0" y2="0" x2="266"></line>
+        <line y1="5" x1="0" y2="-5" x2="0" transform=""></line>
+        <line y1="5" x1="266" y2="-5" x2="266"></line>
+        <text stroke="none" style="outline-style:none;" x="133" y="-5" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px"  text-anchor="middle">Data[1] = 1</text>
+        <text stroke="none" style="outline-style:none;" x="133" y="13" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px" text-anchor="middle"></text>
+    </g>
+    <g transform="translate(512 70)" stroke-width="1" stroke="#000000"><line y1="0" x1="0" y2="0" x2="128"></line>
+        <line y1="5" x1="0" y2="-5" x2="0" transform=""></line>
+        <text stroke="none" style="outline-style:none;" x="64" y="-5" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px"  text-anchor="middle">...</text>
+        <text stroke="none" style="outline-style:none;" x="64" y="13" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px" text-anchor="middle"></text>
+    </g>
+    <!-- <g id="g1" transform="translate(40 0)">
+        <line stroke="#000000" y1="60.000000px" id="line1" x1="60.000000px" stroke-width="1.5px" y2="60.000000px" x2="350.000000px" transform=""></line>
+        <polygon points="60,55 53,60 60,65" stroke="#000000" id="polygon1" stroke-width="1.5px" fill="black" transform="" stroke-linejoin="round"></polygon>
+        <polygon points="350,55 357,60 350,65 " stroke="#000000" id="polygon2" stroke-width="1.5px" fill="black" transform="" stroke-linejoin="round"></polygon>
+        <text stroke="none" style="outline-style:none;" id="text1" stroke-width="1px" x="205px" text-rendering="geometricPrecision" font-family="Helvetica" fill="#000000" font-size="12px" y="55px" transform="" text-anchor="middle">Value = 0
+</text>
+    </g>
+    <g id="g2" transform="translate(350 0)">
+        <line stroke="#000000" y1="60.000000px" x1="60.000000px" stroke-width="1.5px" y2="60.000000px" x2="350.000000px" transform="" id="line2"></line>
+        <polygon points="60,55 53,60 60,65" stroke="#000000" stroke-width="1.5px" fill="black" transform="" stroke-linejoin="round" id="polygon3"></polygon>
+        <polygon points="350,55 357,60 350,65 " stroke="#000000" stroke-width="1.5px" fill="black" transform="" stroke-linejoin="round" id="polygon3"></polygon>
+        <text stroke="none" style="outline-style:none;" stroke-width="1px" x="205px" text-rendering="geometricPrecision" font-family="Helvetica" fill="#000000" font-size="12px" y="55px" transform="" text-anchor="middle" id="text2">Value = 1
+</text>
+    </g> -->
+    <g transform="translate(50 180)" stroke-width="1" stroke="#000000"><line y1="0" x1="0" y2="0" x2="128"></line>
+        <line y1="5" x1="0" y2="-5" x2="0" transform=""></line>
+        <line y1="5" x1="128" y2="-5" x2="128"></line>
+        <text stroke="none" style="outline-style:none;" x="64" y="-5" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px"  text-anchor="middle"></text>
+        <text stroke="none" style="outline-style:none;" x="64" y="13" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px" text-anchor="middle">Mark</text>
+    </g>
+    <g transform="translate(182 180)" stroke-width="1" stroke="#000000"><line y1="0" x1="0" y2="0" x2="56"></line>
+        <line y1="5" x1="0" y2="-5" x2="0" transform=""></line>
+        <line y1="5" x1="56" y2="-5" x2="56"></line>
+        <text stroke="none" style="outline-style:none;" x="28" y="-5" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px"  text-anchor="middle"></text>
+        <text stroke="none" style="outline-style:none;" x="28" y="13" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px" text-anchor="middle">Space</text>
+    </g>
+    <g transform="translate(242 180)" stroke-width="1" stroke="#000000"><line y1="0" x1="0" y2="0" x2="126"></line>
+        <line y1="5" x1="0" y2="-5" x2="0" transform=""></line>
+        <line y1="5" x1="126" y2="-5" x2="126"></line>
+        <text stroke="none" style="outline-style:none;" x="63" y="-5" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px"  text-anchor="middle"></text>
+        <text stroke="none" style="outline-style:none;" x="63" y="13" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px" text-anchor="middle">Mark</text>
+    </g>
+    <g transform="translate(372 180)" stroke-width="1" stroke="#000000"><line y1="0" x1="0" y2="0" x2="136"></line>
+        <line y1="5" x1="0" y2="-5" x2="0" transform=""></line>
+        <line y1="5" x1="136" y2="-5" x2="136"></line>
+        <text stroke="none" style="outline-style:none;" x="68" y="-5" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px"  text-anchor="middle"></text>
+        <text stroke="none" style="outline-style:none;" x="68" y="13" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px" text-anchor="middle">Space</text>
+    </g>
+    <g transform="translate(512 180)" stroke-width="1" stroke="#000000"><line y1="0" x1="0" y2="0" x2="128"></line>
+        <line y1="5" x1="0" y2="-5" x2="0" transform=""></line>
+        <line y1="5" x1="128" y2="-5" x2="128"></line>
+        <text stroke="none" style="outline-style:none;" x="64" y="-5" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px"  text-anchor="middle"></text>
+        <text stroke="none" style="outline-style:none;" x="64" y="13" text-rendering="geometricPrecision" font-family="Helvetica" font-size="11px" text-anchor="middle">Mark</text>
+    </g>
+</svg>
