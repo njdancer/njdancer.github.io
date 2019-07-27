@@ -53,7 +53,7 @@
   "scripts": {
     "type-check": "tsc --noEmit",
     "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "[[ \"$(git branch | grep \\* | cut -d ' ' -f2)\" == \"publish\" ]] && [[ -z \"$(git status --untracked-files=no --porcelain)\" ]] && gatsby build && gh-pages -d public -b master",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
