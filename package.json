@@ -19,6 +19,7 @@
     "gatsby-plugin-typescript": "^2.1.2",
     "gatsby-source-filesystem": "^2.1.6",
     "gatsby-transformer-sharp": "^2.2.4",
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -52,6 +53,7 @@
   "scripts": {
     "type-check": "tsc --noEmit",
     "build": "gatsby build",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
@@ -60,9 +62,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/njdancer/nick.dncr.me"
+    "url": "https://github.com/njdancer/njdancer.github.io"
   },
   "bugs": {
-    "url": "https://github.com/njdancer/nick.dncr.me/issues"
+    "url": "https://github.com/njdancer/njdancer.github.io/issues"
   }
 }
