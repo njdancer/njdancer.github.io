@@ -1,13 +1,14 @@
 ---
 layout: post
 title: So, Why start a blog in 2017?
+date: "2017-09-08"
 ---
+
 We live in an age with few limitations on self expression. Social media is fast becoming one of the dominant forms of communication and content platforms of all types continue to take off. In this environment the question I am often asking myself is not whether to post, or what to post, but where to post.
 
 While I've long wanted a place to share my ideas and experiments, that question has held me back. Platforms like Facebook are great for keeping in touch with friends but for specific topics are very likely to just limit your audience to those who aren't interested. Twitter is obviously incredibly powerful for generating public conversation but does not support long form content and is difficult to use effectively with few followers. There are also CMS platforms like Medium which have taken the publishing world by storm, yet for all the powerful functionality they provide it has always felt like this comes at the cost of flexibility that you may regret in the future.
 
 This has led me to(finally) start a blog.
-
 
 ### What do you have to say though?
 

@@ -7,6 +7,7 @@ tags:
   - Arduino
   - ESP8266
   - Smart Home
+date: "2018-07-10"
 ---
 
 I was going through my home recently looking for options to make my existing appliances a bit smarter. Our remote controlled air conditioner stood out because its something that can take several minutes to effectively cool/heat a room. It can also be quite costly to run so ensuring this only runs when necessary could also save money off my electricity bill. In order for this to work, I would need to find a way to interface with the AC. I know it uses Infrared like most remote controls but further details of the protocol were unavailable. The only option left was to reverse engineer the remote that came with the unit.
@@ -58,7 +59,7 @@ Now that we can see the command data, you may think we have all we need and we c
 SERIAL_PORT=/dev/cu.wchusbserial1410; stty -f "$SERIAL_PORT" 115200|grep -a --line-buffered rawData "$SERIAL_PORT"|tr -u '\n' '\0'|xargs -0 -n1 python auto_analyse_raw_data.py
 ```
 
-This analysis gives us a few important bits of information that will be required to eventually reimplement this protocol ourselves. Firstly we should take note of the timing information. The analysis will show any potential timing candidates for both marks and spaces, as well as offer suggestions for what particular parts of the command use what timing. We can also see the individual bits of data and can map these bits of data to commands on our remote. This stage will vary greatly depending on your remote and is largely a matter of trial and error. There are, however, a few tips I can share that may make this easier. 
+This analysis gives us a few important bits of information that will be required to eventually reimplement this protocol ourselves. Firstly we should take note of the timing information. The analysis will show any potential timing candidates for both marks and spaces, as well as offer suggestions for what particular parts of the command use what timing. We can also see the individual bits of data and can map these bits of data to commands on our remote. This stage will vary greatly depending on your remote and is largely a matter of trial and error. There are, however, a few tips I can share that may make this easier.
 
 The easiest bits to find first are any that represent functionality that can be either on or off. Power is a great example of this and the following image shows our command data oscilating between these two states. Immediately in this image we notice that bits 3, 22, 66 (counting from 0) are all changing, suggesting that these all control power.
 
@@ -147,10 +148,9 @@ DeLonghi AC map
 
 With this, the earlier timing information we gathered and bit order, we now have enough information to reimplement this protocol and send arbitrary commands to your device. For now, reimplementation will be left as an exercise to the reader but stay tuned and in the meantime the source for [IRRemote][3] is a great place to see how this is done already.
 
-
-[1]:https://en.wikipedia.org/wiki/Modulation
-[2]:https://en.wikipedia.org/wiki/Modem
-[3]:https://github.com/z3t0/Arduino-IRremote
-[4]:https://github.com/markszabo/IRremoteESP8266
-[5]:https://github.com/markszabo/IRremoteESP8266/blob/master/tools/auto_analyse_raw_data.py
-[6]:http://www.pcbheaven.com/wikipages/Pulse_Position_Modulation/
+[1]: https://en.wikipedia.org/wiki/Modulation
+[2]: https://en.wikipedia.org/wiki/Modem
+[3]: https://github.com/z3t0/Arduino-IRremote
+[4]: https://github.com/markszabo/IRremoteESP8266
+[5]: https://github.com/markszabo/IRremoteESP8266/blob/master/tools/auto_analyse_raw_data.py
+[6]: http://www.pcbheaven.com/wikipages/Pulse_Position_Modulation/

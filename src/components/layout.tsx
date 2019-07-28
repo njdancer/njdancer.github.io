@@ -11,7 +11,7 @@ import React from "react"
 import "components/layout.css"
 import Header from "components/header"
 
-interface Props {
+export interface Props {
   children: React.ReactNode | string
 }
 

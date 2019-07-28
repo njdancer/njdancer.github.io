@@ -1,4 +1,11 @@
-{
+const path = require("path")
+
+module.exports = {
+  "settings": {
+    "react": {
+      "version": "detect",
+    }
+  },
   "env": {
     "browser": true,
     "es6": true
@@ -31,7 +38,8 @@
     "sort-imports-es6-autofix",
     "import",
     "jsx-a11y",
-    "react-hooks"
+    "react-hooks",
+    "graphql"
   ],
   "rules": {
     "@typescript-eslint/indent": "off",
@@ -68,6 +76,14 @@
         "reservedFirst": true
       }
     ],
-    "prettier/prettier": "warn"
+    "prettier/prettier": "warn",
+    "graphql/template-strings": [
+      "error",
+      {
+        "env": "relay",
+        "schemaJsonFilepath": path.resolve(__dirname, "./schema.json"),
+        "tagName": "graphql"
+      }
+    ]
   }
 }

@@ -45,6 +45,15 @@ module.exports = {
       },
       resolve: "gatsby-plugin-root-import",
     },
+    {
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown`,
+      },
+      resolve: `gatsby-source-filesystem`,
+    },
+    "gatsby-transformer-remark",
+    "gatsby-plugin-extract-schema",
   ],
   siteMetadata: {
     author: `@gatsbyjs`,
