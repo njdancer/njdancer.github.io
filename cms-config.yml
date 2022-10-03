@@ -5,20 +5,21 @@ backend:
 publish_mode: editorial_workflow
 media_folder: public/img
 public_folder: img
+site_url: http://localhost:3000
+# site_url: https://nick.dncr.me
 collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - label: "Home"
-        name: "home"
-        file: "content/home.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Publish Date", name: "date", widget: "datetime" }
-          - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Cats"
-            name: "cats"
-            widget: list
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: posts
+    create: true
+    delete: true
+    extension: mdx
+    format: frontmatter
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "posts/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: string }
+      - { label: "Publish Date", name: "date", widget: datetime }
+      - { label: "Body", name: "body", widget: markdown }
+      - { label: "Tags", name: "tags", widget: list }
